@@ -1,0 +1,27 @@
+<form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <h1 class="heading1">Contact List</h1>
+  <div formArrayName="phone">
+    <div *ngFor="let items of contact.controls; let i = index">
+      <div [formGroupName]="i">
+        Mobile :
+        <input
+          class="inputField"
+          type="text"
+          formControlName="mobile"
+          placeholder="Enter the mobile number"
+          (keypress)="($event.charCode >= 48 && $event.charCode < 58)"
+        />
+
+        <button (click)="removeContact(i)">Remove</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="add-btn btn" (click)="addContact()">
+    Add Contact
+  </button>
+  <button type="submit" class="submit-btn btn">Submit</button>
+
+  <div class="result">
+    {{ this.contactForm.value.phone | json }}
+  </div>
+</form>
