@@ -1,0 +1,11 @@
+<div class="inputBox">
+    <h2>Check missing elements</h2>
+    <input type="text" name="" id="inputField" placeholder="Please enter the number" [(ngModel)]="userInput"
+        (keypress)="($event.charCode >= 48 && $event.charCode < 58)">
+    <div class="btn">
+        <button (click)="findValueInArray(userInput)">Check</button>
+    </div>
+    <div class="result">
+        <h2>{{result}}</h2>
+    </div>
+</div>
