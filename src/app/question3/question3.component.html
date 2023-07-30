@@ -2,7 +2,7 @@
   <h1 class="heading1">Contact List</h1>
   <div formArrayName="phone">
     <div *ngFor="let items of contact.controls; let i = index">
-      <div [formGroupName]="i">
+      <div class="inputBox" [formGroupName]="i">
         Mobile :
         <input
           class="inputField"
@@ -12,11 +12,13 @@
           (keypress)="($event.charCode >= 48 && $event.charCode < 58)"
         />
 
-        <button (click)="removeContact(i)">Remove</button>
+        <button (click)="removeContact(i)" class="remove-btn btn">
+          Remove
+        </button>
       </div>
     </div>
   </div>
-  <button type="button" class="add-btn btn" (click)="addContact()">
+  <button type="button" class="primary-btn btn" (click)="addContact()">
     Add Contact
   </button>
   <button type="submit" class="submit-btn btn">Submit</button>

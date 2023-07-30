@@ -5,3 +5,33 @@
   padding: 0%;
   box-sizing: border-box;
 }
+
+.submit-btn {
+  width: 5rem;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  width: 5rem;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  height: 2rem;
+  width: 6rem;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}

@@ -37,4 +37,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textField {
+  width: 300px;
+  padding: 10px 5px;
+}
+
+#textField::placeholder {
+  text-align: center;
 }
